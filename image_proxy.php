@@ -109,7 +109,7 @@ if (parse_sized_path($image_path, $image_info)) {
         show_default();
     }
 
-    if (!is_file($image_info['src_image_path'])) {
+    if (!is_file($image_root . '/' . $image_info['src_image_path'])) {
         show_default();
     }
 
@@ -126,7 +126,7 @@ if (parse_sized_path($image_path, $image_info)) {
 } else if (parse_literal_path($image_path, $image_info)) {
     # parse image url with literal name
 
-    if (!is_file($image_info['src_image_path'])) {
+    if (!is_file($image_root . '/' . $image_info['src_image_path'])) {
         show_default();
     }
 
